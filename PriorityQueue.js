@@ -1,9 +1,3 @@
-/**
- * @param {number[][]} points
- * @param {number} k
- * @return {number[][]}
- 
- */
 class PriorityQueue {
   constructor(comparator, maxSize) {
     this.comparator =
