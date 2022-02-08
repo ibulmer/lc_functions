@@ -77,17 +77,3 @@ class PriorityQueue {
   }
 }
 
-
-
-var kClosest = function(points, k) {
-    let queue = new PriorityQueue((a, b) => b[0] * b[0] + b[1] * b[1] - a[0] * a[0] - a[1] * a[1])
-    for (let i = 0; i < points.length; i++) {
-        queue.push(points[i]);
-        if (queue.getSize() > k) queue.pop();
-    }
-    let result = []; 
-    while (queue.getSize()) {
-        result.push(queue.pop());
-    }
-    return result;
-};
